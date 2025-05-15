@@ -33,7 +33,7 @@ const Login = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:8000/api/v1/user/login`,
+        `https://balanza-backend-8dr2.onrender.com/api/v1/user/login`,
         input,
         {
           headers: {

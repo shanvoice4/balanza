@@ -32,7 +32,7 @@ const Signup = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:8000/api/v1/user/register`,
+        `https://balanza-backend-8dr2.onrender.com/api/v1/user/register`,
         user,
         {
           headers: {

@@ -33,7 +33,7 @@ const CreateBlog = () => {
     try {
       setLoading(true);
       const res = await axios.post(
-        `http://localhost:8000/api/v1/blog/`,
+        `https://balanza-backend-8dr2.onrender.com/api/v1/blog/`,
         { title, category },
         {
           headers: {

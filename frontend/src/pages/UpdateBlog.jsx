@@ -74,7 +74,7 @@ const UpdateBlog = () => {
     try {
       setLoading(true);
       const res = await axios.put(
-        `http://localhost:8000/api/v1/blog/${id}`,
+        `https://balanza-backend-8dr2.onrender.com/api/v1/blog/${id}`,
         formData,
         {
           headers: {
@@ -99,12 +99,15 @@ const UpdateBlog = () => {
     console.log("action", action);
 
     try {
-      const res = await axios.patch(`http://localhost:8000/api/v1/blog/${id}`, {
-        params: {
-          action,
-        },
-        withCredentials: true,
-      });
+      const res = await axios.patch(
+        `https://balanza-backend-8dr2.onrender.com/api/v1/blog/${id}`,
+        {
+          params: {
+            action,
+          },
+          withCredentials: true,
+        }
+      );
       if (res.data.success) {
         setPublish(!publish);
         toast.success(res.data.message);
@@ -120,7 +123,7 @@ const UpdateBlog = () => {
   const deleteBlog = async () => {
     try {
       const res = await axios.delete(
-        `http://localhost:8000/api/v1/blog/delete/${id}`,
+        `https://balanza-backend-8dr2.onrender.com/api/v1/blog/delete/${id}`,
         { withCredentials: true }
       );
       if (res.data.success) {
