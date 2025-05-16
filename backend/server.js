@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
     origin: "https://balanza-frontend.onrender.com",
-    credentials: true,
+    withCredentials: true,
   })
 );
 
